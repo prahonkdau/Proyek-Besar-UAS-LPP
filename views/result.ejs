@@ -1,0 +1,92 @@
+<div class="result-container">
+  <div class="result-layout">
+
+    <!-- TABLE -->
+    <div class="card">
+      <h2>Hasil Forecast Penjualan</h2>
+      <p class="subtitle">Analisis tren dan penyesuaian musiman</p>
+
+      <table class="forecast-table">
+        <thead>
+          <tr>
+            <th>Bulan</th>
+            <th>Forecast Normal</th>
+            <th>Forecast Seasonal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% results.forEach((r, i) => { %>
+          <tr>
+            <td>Bulan <%= i + 1 %></td>
+            <td><%= r.normal.toFixed(2) %></td>
+            <td><%= r.seasonal.toFixed(2) %></td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- CHART -->
+    <div class="card chart-card">
+      <h2>Visualisasi Forecast</h2>
+      <div class="chart-wrapper">
+        <canvas id="forecastChart"></canvas>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+const labels = <%- JSON.stringify(labels) %>;
+const normalData = <%- JSON.stringify(normalForecast) %>;
+const seasonalData = <%- JSON.stringify(seasonalForecast) %>;
+
+new Chart(document.getElementById("forecastChart"), {
+  type: "line",
+  data: {
+    labels,
+    datasets: [
+      {
+        label: "Normal Forecast",
+        data: normalData,
+        borderColor: "#ffffff",
+        backgroundColor: "rgba(255,255,255,0.15)",
+        borderWidth: 3,
+        tension: 0.4,
+        pointBackgroundColor: "#ffffff"
+      },
+      {
+        label: "Seasonal Forecast",
+        data: seasonalData,
+        borderColor: "#ff4d4d",               /* 🔴 MERAH */
+        backgroundColor: "rgba(255,77,77,0.25)",
+        borderWidth: 3,
+        tension: 0.4,
+        pointBackgroundColor: "#ff4d4d"
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        labels: {
+          color: "#ffffff"
+        }
+      }
+    },
+    scales: {
+      x: {
+        ticks: { color: "#ffffff" },
+        grid: { color: "rgba(255,255,255,0.15)" }
+      },
+      y: {
+        ticks: { color: "#ffffff" },
+        grid: { color: "rgba(255,255,255,0.15)" }
+      }
+    }
+  }
+});
+</script>

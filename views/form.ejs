@@ -1,0 +1,28 @@
+<div class="form-card">
+  <h1>Input Data Penjualan</h1>
+
+  <form action="/forecast" method="POST" class="form-vertical">
+    <input
+      type="text"
+      name="sales"
+      placeholder="Contoh: 120,130,140"
+      required
+    />
+
+    <input
+      type="text"
+      name="seasonal"
+      placeholder="Contoh: 1,1,0.6,2.3"
+      required
+    />
+
+    <input
+      type="number"
+      name="months"
+      placeholder="Jumlah Bulan"
+      required
+    />
+
+    <button type="submit">Hitung Forecast</button>
+  </form>
+</div>
