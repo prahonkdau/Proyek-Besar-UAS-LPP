@@ -176,13 +176,6 @@ PORT=3001 npm start
 - Hapus file database lama: `rm -rf database/db.sqlite`
 - Jalankan ulang: `npm start`
 
-## 👤 Author
-
-
-## 📞 Support
-
-Jika ada pertanyaan atau masalah, silakan buat issue di repository ini.
-
 ---
 
 **Last Updated**: December 2025
