@@ -1,3 +1,8 @@
+UAS Logika Pemrograman Kelompok 32 Teknik Industri UPNVJ 2025
+- Raffa Aqila Prayata (2510312076)
+- Juan Felix Pardamean Sagala (2510312049)
+- Bani Alfalah Dewantoro (2510312105)
+
 # Sales Forecast Application
 
 Aplikasi web untuk memprediksi penjualan menggunakan algoritma machine learning dengan antarmuka yang modern dan responsif.
@@ -171,14 +176,8 @@ PORT=3001 npm start
 - Hapus file database lama: `rm -rf database/db.sqlite`
 - Jalankan ulang: `npm start`
 
-## 📄 Lisensi
-
-Proyek ini adalah bagian dari UAS LPP.
-
 ## 👤 Author
 
-- **Nama**: Prahonkdau
-- **GitHub**: [@prahonkdau](https://github.com/prahonkdau)
 
 ## 📞 Support
 
