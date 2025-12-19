@@ -1,7 +1,7 @@
-UAS Logika Pemrograman Kelompok 32 Teknik Industri UPNVJ 2025
-- Raffa Aqila Prayata (2510312076)
-- Juan Felix Pardamean Sagala (2510312049)
-- Bani Alfalah Dewantoro (2510312105)
+# UAS Logika Pemrograman Kelompok 32 Teknik Industri UPNVJ 2025
+## - Raffa Aqila Prayata (2510312076)
+## - Juan Felix Pardamean Sagala (2510312049)
+## - Bani Alfalah Dewantoro (2510312105)
 
 # Sales Forecast Application
 
